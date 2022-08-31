@@ -859,6 +859,10 @@ PrefabInstance:
       propertyPath: p
       value: 
       objectReference: {fileID: 759684169}
+    - target: {fileID: 4158415235273608613, guid: 85589c342848742c58e2f575df5e31ed, type: 3}
+      propertyPath: completeLvlUI
+      value: 
+      objectReference: {fileID: 1234405973}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85589c342848742c58e2f575df5e31ed, type: 3}
 --- !u!1001 &3066453602654672884

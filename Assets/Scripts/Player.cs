@@ -7,8 +7,6 @@ public class Player : MonoBehaviour
     public Rigidbody2D rB;
     public SpriteRenderer sR;
 
-    public GameObject completeLvl;
-
     public float jumpForce = 10f;
     string baseColor;
 
@@ -23,7 +21,6 @@ public class Player : MonoBehaviour
       Pink,
       Purple
     }
-
 
     void Start() {
 
@@ -48,6 +45,12 @@ public class Player : MonoBehaviour
     }
 
     void OnTriggerEnter2D (Collider2D collide) {
+
+      if(collide.tag == "Finish"){
+        Debug.Log("YESIRRRRR");
+        rB.isKinematic = true;
+        return;
+      }
 
       //Chaning the color with the "Color Changer" object
       if(collide.tag == "ColorChanger"){
@@ -109,9 +112,5 @@ public class Player : MonoBehaviour
           break;
         }
       }
-    }
-
-    public void finishLine(){
-      completeLvl.SetActive(true);
     }
 }

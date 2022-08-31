@@ -3,11 +3,11 @@ using UnityEngine;
 public class FinishTrigger : MonoBehaviour
 {
 
-    public Player p;
+    public GameObject completeLvlUI;
 
-    void OnTriggerEnter() {
+    void OnTriggerEnter2D() {
 
-      p.finishLine();
+      completeLvlUI.SetActive(true);
 
     }
 
